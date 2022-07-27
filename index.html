@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web演習最終課題</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Serif+JP:wght@200&amily=Zen+Kaku+Gothic+New:wght@300&family=Klee+One&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <header class="animate__animated animate__fadeInDown animate__delay-3s">
+            <div class="header-logo">
+                <h2 class="logo"><a href="index.html">My portfolio</a></h2>
+                <p class="header-name"> @Osaka</p>
+            </div>
+            <div id="drawer_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="global_nav">
+                <ul class="menu">
+                    <li class="menu-list"><a href="#">TOP</a></li>
+                    <li class="menu-list"><a href="#iro">色の印象</a></li>
+                    <li class="menu-list"><a href="#meishi">名刺</a></li>
+                    <li class="menu-list"><a href="#mojikumi">文字組み</a></li>
+                    <li class="menu-list"><a href="#dezain">WEBデザイン</a></li>
+                    <li class="menu-list"><a href="#coding">コーディング</a></li>
+                </ul>
+            </nav>
+    </header>
+    <div class="top">
+        <img class="top-img animate__animated animate__fadeIn animate__slower animate__delay-2s" src="img/top-img4.png" alt="">
+        <div class="top-gallary animate__animated animate__fadeInUp animate__delay-3s">
+            <div class="gallary animated">
+                <a href="#iro"></a>
+                <img src="img/color-tag.jpeg" alt="">
+            </div>
+            <div class="gallary animated">
+                <a href="#meishi"></a>
+                <img src="img/meishi-tag.jpeg" alt="">
+            </div>
+            <div class="gallary animated">
+                <a href="#mojikumi"></a>
+                <img src="img/mojikumi-tag.jpeg" alt="">
+            </div>
+            <div class="gallary animated">
+                <a href="#dezain"></a>
+                <img src="img/dezain-tag.jpeg" alt="">
+            </div>
+            <div class="gallary animated">
+                <a href="#coding"></a>
+                <img src="img/coding-tag.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="main-content">
+            <div class="color-content">
+                <div class="title-txt">
+                    <h2 id="iro">色の印象</h2>
+                </div>
+                <img class="str-img" src="./img/color.png" alt="">
+            </div>
+            <div class="meishi-content">
+                <div class="title-txt">
+                    <h2 id="meishi">名刺</h2>
+                </div>
+                <img class="meishi-img" src="./img/meishi.png" alt="">
+            </div>
+            <div class="mojikumi-content">
+                <div class="title-txt">
+                    <h2 id="mojikumi">文字組み</h2>
+                </div>
+                <iframe class="moji" src="mojikumi.html" height="768"></iframe>
+                <a class="mojikumi-more" href="mojikumi.html" target="blank">&lt;more&gt;</a>
+            </div>
+            <div class="dezain-content">
+                <div class="title-txt">
+                    <h2 id="dezain">植木のWEBデザイン</h2>
+                </div>
+                <div class="dezain-list">
+                    <a href="dezain.html" target="blank"></a>
+                    <img class="dezain-list__itemImg1" src="./img/dezain-img.png" alt="">
+                    <img class="dezain-list__itemImg2" src="./img/dezain-img1.png" alt="">
+                </div>
+            </div>
+            <div class="coding-content">
+                <div class="title-txt">
+                    <h2 id="coding">植木屋のコーディング</h2>
+                </div>
+                <iframe src="ueki.html"></iframe>
+                <a class="cording-more" href="ueki.html" target="blank">&lt;more&gt;</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <a href="#"> <img class="footer-item" src="./img/uuuu.png" alt="" width="128"
+                height="128"></a>
+            <div class="footer-name">
+                <h2>東京工芸大学</h2>
+                <p>芸術学部インタラクティブメディア学科<br>
+                大阪&nbsp;&nbsp;響 <br> Osaka Hibiki</p>
+            </div>
+        </div>
+    </footer>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+		$(function(){
+			$("#drawer_toggle").click(function(){
+				$(this).toggleClass("open");
+				$("#global_nav").toggleClass("sp_open");
+			});
+		});
+
+        $(function(){
+			$(".menu-list a").on('click',function(){
+				$("#drawer_toggle").toggleClass("open");
+				$("#global_nav").toggleClass("sp_open");
+			});
+		});
+	</script>
+</body>
+</html>
